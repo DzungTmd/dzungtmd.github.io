@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123407977-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123407977-1');
+    </script>
+
+    <!-- Bootstrap and CSS and JS-->
+    <meta charset="utf-8">
+    <title>DT - </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <!-- My CSS and script -->
+    <link rel="stylesheet" href="../../static/css/main.css">
+    <!-- <script src="../static/script/myscript.js"></script> -->
+    <!-- <script type="text/javascript" src="../../static/script/main.js"></script> -->
+
+    <!-- This allows us to type Math -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          TeX: {
+             equationNumbers: {  autoNumber: "AMS"  },
+             extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+                }
+        });
+    </script>
+    <script type="text/javascript"
+     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../../index.html">DZUNG TRAN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="../../index.html">ABOUT</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">RESEARCH</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="../../projects/index.html">PROJECTS</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="../../writing/index.html">WRITING</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="../../cv/index.html">CV & PUBLICATIONS</a>
+        </li>
+
+
+      </ul>
+      <!-- Search Box -->
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+
+    
+<div class="container  container-small">
+  
+
+  
+
+  <span id="test" class="math display popup popuptext" >\[\begin{align}
+  \dot{x}(t) = \alpha(t) f(x) + d(x) +  g(t) , \end{align}\] </span>
+
+  Here is the reference to the equation (<a href="#test" data-reference-type="ref" data-reference="eqn1" class="popup" onmouseover="myFunction()">[1]</a>)
+
+  <header>
+  <h1 class="title" style="text-align: center">On Finite-Time Control with<br />
+  Time Transformation Function</h1>
+  </header>
+
+
+  <h1 id="the-problem">The Problem</h1>
+  <p>Given the dynamics <span id="general" class="math display">\[\begin{align}
+  \dot{x}(t) = \alpha(t) f(x) + d(x) +  g(t) , \label{general} \tag{1} \end{align}\] </span> where <span class="math inline">\(x(t) \in S{R}^n\)</span> is the state, <span class="math inline">\(\alpha(t) \in S{R}_+\)</span> is the finite-time gain, <span class="math inline">\(d(x)\)</span> and <span class="math inline">\(g(t) \in S{R}^n\)</span> are perturbation terms and bounded such that <span class="math inline">\(\|d(x)\| \le d^*\)</span> and <span class="math inline">\(\|g(t)\| \le g^*\)</span>, and <span class="math inline">\(f(x)\)</span> is globally Lipschitz. In addition, the origin of the system <span class="math inline">\(\dot{x}(t) = f(x)\)</span> is a globally asymptotically stable equilibrium point, and there exists a quadratic-type Lyapunov function <span class="math inline">\(V(x)\)</span> such that <span class="math display">\[\begin{aligned}
+  \alpha_1(\|x\|) \le V(x) \le \alpha_2(\|x\|), \label{cond1}\\
+  \frac{\partial V}{\partial x} \le -c_3 \phi^2(\|x\|), \ \ \ \ \
+  \|\frac{\partial V}{\partial x}\| \le c_4 \phi(\|x\|), \label{cond2}\end{aligned}\]</span> where <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_2\)</span> are class <span class="math inline">\(\mathcal{K}\)</span> functions, <span class="math inline">\(c_3\)</span> and <span class="math inline">\(c_4\)</span> are positive constants, and the scalar function <span class="math inline">\(\phi(\|x\|)\)</span> is positive definite and continuous.</p>
+  <p><span id="exp_stab" label="exp_stab">[exp_stab]</span> By converse Lyapunov theorem, (see, for example, Theorem 3.8 of <span class="citation" data-cites="khalil2014nonlinear"></span>), if the origin of the system <span class="math inline">\(\dot{x}(t) = f(x)\)</span> is globally exponentially stable, then there is a continuous differentiable function <span class="math inline">\(V(x)\)</span> that satisfies the inequalities <span class="math display">\[\begin{aligned}
+  c_1\|x\|^2 \le V(x) \le c_2\|x\|^2, \label{cond3} \\
+  \frac{\partial V}{\partial  x} \le -c_3 \|x\|^2, \ \ \ \ \
+  \|\frac{\partial V}{\partial  x}\| \le c_4 \|x\|, \label{cond4}\end{aligned}\]</span> for all <span class="math inline">\(x(t) \in S{R}^n\)</span>, and <span class="math inline">\(c_1, c_2, c_3,\)</span> and <span class="math inline">\(c_4 \in S{R}_+\)</span>. As emphasized in Section 4.2 of <span class="citation" data-cites="khalil2014nonlinear"></span>, the Lyapunov function satisfying (<a href="#cond3" data-reference-type="ref" data-reference="cond3">[cond3]</a>) and (<a href="#cond4" data-reference-type="ref" data-reference="cond4">[cond4]</a>) also satisfies (<a href="#cond1" data-reference-type="ref" data-reference="cond1">[cond1]</a>) and (<a href="#cond2" data-reference-type="ref" data-reference="cond2">[cond2]</a>), but the quadratic-type Lyapunov function may exist even when the origin is not exponentially stable.</p>
+  <p><span id="obj1" label="obj1">[obj1]</span> Generalize the procedure to choose the finite-time gain <span class="math inline">\(\alpha(t)\)</span> and the time transformation <span class="math inline">\(\theta(s)\)</span>.</p>
+  <p><span id="obj2" label="obj2">[obj2]</span> Prove that <span class="math inline">\(x(t) \rightarrow 0\)</span> as <span class="math inline">\(t \rightarrow T\)</span>.</p>
+  <p><span id="presence" label="presence">[presence]</span> The dynamics form (1) is an error dynamics and can be seen, for examples, in (10) of <span class="citation" data-cites="yucelen2018finite"></span>; in (18) of [Robustness of FT Distributed Algorithm]; in (15) of [Finite Time + Separation Principle]. However, the dynamics structure in the aforementioned papers applies only to a class of linear systems; and hence, the origins of their nominal systems are globally exponentially stable and readily satisfied (<a href="#cond3" data-reference-type="ref" data-reference="cond3">[cond3]</a>) and (<a href="#cond4" data-reference-type="ref" data-reference="cond4">[cond4]</a>). The main motivation of this paper is to generalize the problem to a broader class of systems and investigate in detail on how to choose the finite-time gain <span class="math inline">\(\alpha(t)\)</span>.</p>
+  <h1 id="Procedure">Choosing Finite-Time Gain and the Time Transformation </h1>
+  <p>In this section, we investigate the relationship between the finite-time gain <span class="math inline">\(\alpha(t)\)</span> and the time transformation function <span class="math inline">\(\theta(s)\)</span>. The result of this section aims to achieve the Objective <a href="#obj1" data-reference-type="ref" data-reference="obj1">[obj1]</a> and serves as a basis to attain Objective 2.</p>
+  <p>In general, we would like to choose a scalar function as a finite-time gain <span class="math inline">\(\alpha(t)\)</span> with properties:</p>
+  <ul>
+  <li><p><span class="math inline">\(\alpha(t)\)</span> is continuous differentiable on <span class="math inline">\(t \in [0,T)\)</span>.</p></li>
+  <li><p><span class="math inline">\(\alpha(t) &gt; m \ \ \forall \ t \in [0,T)\)</span> for some <span class="math inline">\(m &gt; 0\)</span>.</p></li>
+  <li><p><span class="math inline">\(\lim_{t \rightarrow T} \alpha(t) = \infty\)</span>.</p></li>
+  </ul>
+  <p>After choosing <span class="math inline">\(\alpha(t)\)</span>, we define the time transformation function <span class="math inline">\(\theta(s)\)</span> with properties as shown in the following theorem.</p>
+  <p><span id="T1" label="T1">[T1]</span> Given a finite-time gain <span class="math inline">\(\alpha(t)\)</span> as described above. If the time transformation <span class="math inline">\(\theta(s) \triangleq t\)</span> is obtained by solving the differential equation in i.) and satisfies the conditions ii.) and iii.) below</p>
+  <ol>
+  <li><p><span class="math inline">\(\frac{dt}{ds} = \frac{d(\theta(s))}{ds} = \frac{1}{\alpha(\theta(s))}\)</span>, or <span class="math inline">\(\alpha(\theta(s)) d(\theta(s)) = ds\)</span>, <span id="i" label="i">[i]</span></p></li>
+  <li><p><span class="math inline">\(\theta(0) = 0\)</span>, <span id="ii" label="ii">[ii]</span></p></li>
+  <li><p><span class="math inline">\(\lim_{s \rightarrow \infty}\theta(s) = T\)</span>, <span id="iii" label="iii">[iii]</span></p></li>
+  </ol>
+  <p>Then, the following statements hold</p>
+  <ol type="1">
+  <li><p><span class="math inline">\(\theta(s)\)</span> is continuous differentiable and strictly increasing on <span class="math inline">\(s \in [0,\infty)\)</span>. <span id="1" label="1">[1]</span></p></li>
+  <li><p>Let <span class="math inline">\(h(s) \triangleq\frac{d(\theta(s))}{ds}\)</span>, then <span class="math inline">\(h(s)\)</span> is bounded and <span class="math inline">\(\lim_{s \rightarrow \infty} h(s) = 0\)</span>. <span id="2" label="2">[2]</span></p></li>
+  <li><p>Let <span class="math inline">\(x(t) = x(\theta(s)) \triangleq\bar{x}(s)\)</span>, then the dynamics (<a href="#general" data-reference-type="ref" data-reference="general">[general]</a>) can be rewritten in the stretch time domain <span class="math inline">\(s \in [0,\infty)\)</span> as <span class="math display">\[\begin{aligned}
+  \bar{x}&#39;(s) = f(\bar{x}) + h(s)\Big( d(\bar{x}) + g\big(\theta(s)\big) \Big), \label{general_s}\end{aligned}\]</span> where <span class="math inline">\(\bar{x}&#39;(s) \triangleq\frac{d\bar{x}}{ds}\)</span>. <span id="3" label="3">[3]</span></p></li>
+  </ol>
+  <p><strong>Proof.</strong> For 1.), we first note that the time transformation function <span class="math inline">\(\theta(s)\)</span> is actually a change of variable mapping the stretch time domain <span class="math inline">\(s \in [0,\infty)\)</span> to the normal time domain <span class="math inline">\(t \in [0,T)\)</span>. In addition, <span class="math inline">\(\alpha(t) = \alpha(\theta(s))\)</span>. From item <a href="#i" data-reference-type="ref" data-reference="i">[i]</a>), we have <span class="math display">\[\begin{aligned}
+  \frac{d(\theta(s))}{ds} = \frac{1}{\alpha(\theta(s))} = \frac{1}{\alpha(t)}, \label{E1}\end{aligned}\]</span> Since <span class="math inline">\(\alpha(t)\)</span> is continuous differentiable on <span class="math inline">\(t \in [0,T)\)</span>, it is defined on <span class="math inline">\(t \in [0,T)\)</span>; and hence, so is <span class="math inline">\(1/\alpha(t)\)</span>. This implies <span class="math inline">\(\frac{d(\theta(s))}{ds}\)</span> exists for all <span class="math inline">\(s \in [0, \infty)\)</span>, thus <span class="math inline">\(\theta(s)\)</span> is continuous differentiable.</p>
+  <p>In addition, <span class="math inline">\(\alpha(t) &gt; m \ \ \forall \ t \in [0,T)\)</span> for some <span class="math inline">\(m &gt; 0\)</span> implies <span class="math inline">\(\frac{d(\theta(s))}{ds} &gt; 0\)</span>. As a result, <span class="math inline">\(\theta(s)\)</span> is strictly increasing on <span class="math inline">\(s \in [0,\infty)\)</span>. Hence, item 1.) is proved.</p>
+  <p>For 2.), by definition of <span class="math inline">\(h(s)\)</span> and (<a href="#E1" data-reference-type="ref" data-reference="E1">[E1]</a>), we have <span class="math display">\[\begin{aligned}
+  h(s)= \frac{1}{\alpha(\theta(s))} = \frac{1}{\alpha(t)}. \label{E2}\end{aligned}\]</span> Since <span class="math inline">\(\alpha(t) &gt; 0\)</span>, <span class="math inline">\(h(s)\)</span> is bounded by <span class="math inline">\(h^* \triangleq\frac{1}{\rm block{\scriptstyle -}diag{\rm inf}_{0\le t &lt; T} \big(\alpha(t)\big)}\)</span>. In addition, items <a href="#ii" data-reference-type="ref" data-reference="ii">[ii]</a>) and <a href="#iii" data-reference-type="ref" data-reference="iii">[iii]</a>) indicates that as <span class="math inline">\(s\)</span> approaches <span class="math inline">\(\infty\)</span>, <span class="math inline">\(t\)</span> approaches <span class="math inline">\(T\)</span>, and recall that <span class="math inline">\(\alpha(t)\)</span> satisfies <span class="math inline">\(\lim_{t \rightarrow T} \alpha(t) = \infty\)</span>. Therefore, we have <span class="math display">\[\begin{aligned}
+  \lim_{s \rightarrow \infty} h(s) = \lim_{s \rightarrow \infty} \frac{1}{\alpha\big(\theta(s)\big)} = \lim_{t \rightarrow T} \frac{1}{\alpha(t)}
+  = \big( \lim_{t \rightarrow T} \alpha(t) \big)^{-1} = 0.\end{aligned}\]</span> Indeed, we note that <span class="math display">\[\begin{aligned}
+  \int_{0}^{\infty} |h(s)| ds = \int_{0}^{\infty} h(s) ds = \int_{0}^{T} d\big(\theta(s) \big) =  \int_{0}^{T} dt = T. \label{L1}\end{aligned}\]</span> Thus, <span class="math inline">\(h(s) \in \mathcal{L}_1\)</span> on stretch time interval <span class="math inline">\(s \in [0,\infty)\)</span>. Hence, item 2.) is proved.</p>
+  <p><span id="whyT" label="whyT">[whyT]</span> <span class="math inline">\(h(s)\)</span> is the derivative of <span class="math inline">\(\theta(s)\)</span>; that is, <span class="math inline">\(h(s) = \frac{d(\theta(s))}{ds}\)</span>, so its integral is <span class="math inline">\(\theta(s) = t\)</span> itself, which makes the above integral equal to <span class="math inline">\(T\)</span>.</p>
+
+  <p>For 3.), we have <span class="math display">\[\begin{aligned}
+  \bar{x}&#39;(s) = &amp; \frac{d\bar{x}}{ds} =  \frac{d\theta(s)}{ds} \frac{d \bar{x}}{d\theta(s)} \nonumber \\
+  = &amp; \frac{1}{\alpha(\theta(s))} \Big( \alpha(\theta(s)) f(\bar{x}) + d(\bar{x}) + g(\theta(s)) \Big)\nonumber \\
+  = &amp; f(\bar{x}) + \frac{1}{\alpha(\theta(s))}  \Big( d(\bar{x}) + g(\theta(s)) \Big)    \nonumber \\
+  = &amp;  f(\bar{x}) + h(s)\Big( d(\bar{x}) + g\big(\theta(s)\big) \Big). \label{Stretch}\end{aligned}\]</span> Hence, item 3.) is proved. <span class="math inline">\(\hfill \blacksquare\)</span></p>
+  <p><strong>Example 1.</strong> Consider <span class="math inline">\(\alpha(t) = \frac{1}{(T-t)(mt+a)}\)</span>, where <span class="math inline">\(m, a&gt;0\)</span>. After solving the differential equation in condition i.) of Theorem <a href="#T1" data-reference-type="ref" data-reference="T1">[T1]</a>, we obtain <span class="math inline">\(\theta(s) = \frac{Ta(e^{(a+mT)s}-1)}{ae^{(a+mT)s} + mT}\)</span> satisfying the conditions ii) and iii).</p>
+  <p>Let <span class="math inline">\(a = 0.1\)</span>, <span class="math inline">\(m = 0.1\)</span>, and <span class="math inline">\(T = 5\)</span>. Figure <a href="#Plot" data-reference-type="ref" data-reference="Plot">[Plot]</a> shows the plots of <span class="math inline">\(\alpha(t)\)</span>, <span class="math inline">\(\theta(s)\)</span> and <span class="math inline">\(h(s)\)</span>. As we can see from the figure, <span class="math inline">\(\theta(s)\)</span> is strictly increasing on <span class="math inline">\(s \in [0,\infty)\)</span>. In addition, <span class="math inline">\(\alpha(t)\)</span> has a critical point (global minimum) at <span class="math inline">\(t = 2\)</span> where <span class="math inline">\(\alpha = 1.111\)</span>. Note that the plot of <span class="math inline">\(\theta(s)\)</span> shows that when <span class="math inline">\(t = 2\)</span>, <span class="math inline">\(s = 2.682\)</span>. Furthermore, <span class="math inline">\(h(s)\)</span> has a critical point (global maximum) at <span class="math inline">\(s = 2.682\)</span> where <span class="math inline">\(h = \frac{1}{1.111} = 0.9\)</span>. This justifies the item 2.) of Theorem <a href="#T1" data-reference-type="ref" data-reference="T1">[T1]</a>!</p>
+  <p>Figure <a href="#Plot2" data-reference-type="ref" data-reference="Plot2">[Plot2]</a> shows plots of the family of <span class="math inline">\(\theta(s)\)</span> above as <span class="math inline">\(a\)</span> is increasing while <span class="math inline">\(m\)</span> is fixed, and <span class="math inline">\(m\)</span> is increasing as <span class="math inline">\(a\)</span> is fixed, where the arrow pointing in the increasing direction of <span class="math inline">\(a\)</span> and <span class="math inline">\(m\)</span>. In addition, the time transformation function <span class="math inline">\(\theta(s) = T(1 - e^{-s})\)</span> (dash line) is also plotted for comparison purpose. We should also note that <span class="math inline">\(a\)</span> affects the initial gain of <span class="math inline">\(\alpha(t)\)</span> while <span class="math inline">\(m\)</span> affects how fast <span class="math inline">\(\alpha(t)\)</span> decay during the transient stage.</p>
+  <h1 id="the-analysis">The Analysis</h1>
+  <p>In this section, we uses the result of Section <a href="#Procedure" data-reference-type="ref" data-reference="Procedure">2</a> in order to achieve Objective <a href="#obj2" data-reference-type="ref" data-reference="obj2">[obj2]</a>. Specifically, we prove <span class="math inline">\(x(t) \rightarrow 0\)</span> as <span class="math inline">\(t \rightarrow T\)</span> utilizing the information on the finite-time gain <span class="math inline">\(\alpha(t)\)</span> and the time transformation function <span class="math inline">\(\theta(s)\)</span> given in Theorem <a href="#T1" data-reference-type="ref" data-reference="T1">[T1]</a>.</p>
+  <p>We first recall that, by Theorem 1, the dynamics (<a href="#general" data-reference-type="ref" data-reference="general">[general]</a>) can be rewritten in the stretch time domain <span class="math inline">\(s \in [0,\infty)\)</span> as <span class="math display">\[\begin{aligned}
+  \bar{x}&#39;(s) = f(\bar{x}) + h(s)\Big( d(\bar{x}) + g\big(\theta(s)\big) \Big). \label{general_s2}\end{aligned}\]</span> Define <span class="math inline">\(u(s) \triangleq h(s)\Big( d(\bar{x}) + g(\theta(s) \Big) \in S{R}^n\)</span>. We note that <span class="math inline">\(h(s), d(\bar{x})\)</span> and <span class="math inline">\(g(\theta(s))\)</span> are bounded by <span class="math inline">\(h^*, d^*\)</span> and <span class="math inline">\(g^*\)</span>, respectively; and hence <span class="math inline">\(u(s)\)</span> is also bounded such that <span class="math inline">\(\|u(s)\| \le u^* \triangleq h^*(d^*+g^*)\)</span>. We now rewrite (<a href="#general_s2" data-reference-type="ref" data-reference="general_s2">[general_s2]</a>) in the form <span class="math display">\[\begin{aligned}
+  \bar{x}&#39;(s) = f(\bar{x}) + u(s). \label{general_s3}\end{aligned}\]</span></p>
+  <p>Utilizing the same Lyapunov function of the nominal system <span class="math inline">\(\dot{x}(t) = f(x)\)</span>, which satisfies (<a href="#cond1" data-reference-type="ref" data-reference="cond1">[cond1]</a>) and (<a href="#cond2" data-reference-type="ref" data-reference="cond2">[cond2]</a>), and taking its derivative with respect to <span class="math inline">\(s \in [0,\infty)\)</span> along the trajectories of (<a href="#general_s3" data-reference-type="ref" data-reference="general_s3">[general_s3]</a>), we have <span class="math display">\[\begin{align}
+  V&#39;(\bar{x}) &amp;=&amp; \frac{\partial V}{\partial  \bar{x}} \Big( f(\bar{x}) + u(s) \Big)\nonumber \\
+  &amp;=&amp; \frac{\partial V}{\partial \bar{x}} f(\bar{x}) + \frac{\partial V}{\partial  \bar{x}} u(s) \nonumber \\
+  &amp;\le&amp; -c_3 \phi^2(\|\bar{x}\|) +  c_4 \phi(\|\bar{x}\|)\|u(s)\| \nonumber \\
+  &amp;=&amp; -c_3 \phi^2(\|\bar{x}\|) +\theta \phi^2(\|\bar{x}\|) -\theta \phi^2(\|\bar{x}\|) +  c_4 \phi(\|\bar{x}\|)\|u(s)\|\nonumber \\
+  &amp;\le&amp; -(c_3-\theta)\phi^2(\|\bar{x}\|), \ \ \ \forall \  \|x\| \ge \phi^{-1}\left(\frac{c_4 \|u(s)\|}{\theta}\right), \label{Lyap}\end{align}\]</span> where <span class="math inline">\(\theta \in (0,c_3)\)</span>, and the third inequality comes from (<a href="#cond2" data-reference-type="ref" data-reference="cond2">[cond2]</a>). By Theorem 4.6 of <span class="citation" data-cites="khalil2014nonlinear"></span>, the system (<a href="#general_s3" data-reference-type="ref" data-reference="general_s3">[general_s3]</a>) is input-to-state stable. We note that input-to-state stability implies that when the input converges to zeros as <span class="math inline">\(s \rightarrow \infty\)</span>, so does the state. From Theorem <a href="#T1" data-reference-type="ref" data-reference="T1">[T1]</a>, <span class="math inline">\(\lim_{s \rightarrow \infty} h(s) = 0\)</span>; and hence, <span class="math inline">\(\lim_{s \rightarrow \infty} u(s) = 0\)</span>. As a result, <span class="math inline">\(\bar{x}(s) \rightarrow 0\)</span> as <span class="math inline">\(s \rightarrow \infty\)</span>. Finally, since <span class="math inline">\(t\)</span> approaches <span class="math inline">\(T\)</span> as <span class="math inline">\(s\)</span> approaches <span class="math inline">\(\infty\)</span>, <span class="math inline">\(\lim_{t \rightarrow T}x(t) = 0\)</span>.</p>
+  <p><span id="application" label="application">[application]</span> The result of this section shows that although the dynamics (<a href="#general" data-reference-type="ref" data-reference="general">[general]</a>) is subject to perturbations, its state can converge to zero in a user-defined finite time <span class="math inline">\(T\)</span> under the finite-time gain <span class="math inline">\(\alpha(t)\)</span>. Therefore, for time-critical tasks, if we design the controller for the system such that its error dynamics can be written in the form of (<a href="#general" data-reference-type="ref" data-reference="general">[general]</a>), then its stability is guaranteed.</p>
+  <p><span id="local" label="local">[local]</span> If the origin of the nominal system <span class="math inline">\(\dot{x}(t) = f(x)\)</span> is an asymptotically stable equilibrium point, where <span class="math inline">\(f(x)\)</span> is locally Lipschitz on a domain <span class="math inline">\(D \subset S{R}^n\)</span>, and there exists a quadratic-type Lyapunov function <span class="math inline">\(V(x)\)</span> satisfying the condition (<a href="#cond1" data-reference-type="ref" data-reference="cond1">[cond1]</a>) and (<a href="#cond2" data-reference-type="ref" data-reference="cond2">[cond2]</a>), then the result of this section still hold locally within the region of attraction <span class="math inline">\(R_A \subset D\)</span>.</p>
+
+
+
+
+</div>
+
+
+
+</body>
+
+
+<!-- Footer Note  -->
+<footer>
+    <div class="container">
+        <hr></hr>
+        <div class="row">
+            <div class="span12">
+            <strong>Dzung Tran</strong><br>
+            <!--PhD Candidate <br>
+            Research Assistant at Laboratory for Autonomous, Control, Information, and Systems (<a href="http://lacis.eng.usf.edu/index.html" target="_blank">LACIS</a>)<br>
+            Department of Mechanical Engineering<br>
+            University of South Florida<br> -->
+            Email: <a href="mailto:dtran3@mail.usf.edu?Subject=Contact%20from%20DT%20Site" target="_blank">dtran3@mail.usf.edu</a> <br>
+            <br>
+            </div>
+
+          </div>
+        </div>
+    </div>
+</footer>
+
+<!--My script  -->
+<!-- <script src="../static/script/myscript.js"> </script> -->
+
+</html>
