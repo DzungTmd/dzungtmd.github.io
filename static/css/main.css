@@ -171,7 +171,7 @@
 
 /*Download button  */
 /* Style buttons */
-.btn {
+.btn-download {
   background-color: #ffccb3; /* DodgerBlue; */
   border: none;
   color: white;
@@ -181,6 +181,6 @@
 }
 
 /* Darker background on mouse-over */
-.btn:hover {
+.btn-download:hover {
   background-color: #ff5500; /*RoyalBlue;*/
 }
