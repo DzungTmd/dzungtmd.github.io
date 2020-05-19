@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123407977-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123407977-1');
+    </script>
+
+    <!-- Bootstrap and CSS and JS-->
+    <meta charset="utf-8">
+    <title>DT - Overleaf + Mendeley</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <!-- My CSS and script -->
+    <link rel="stylesheet" href="../../static/css/main.css">
+    <!-- <script src="../static/script/myscript.js"></script> -->
+    <!-- <script type="text/javascript" src="../../static/script/main.js"></script> -->
+
+    <!-- This allows us to type Math -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          TeX: {
+             equationNumbers: {  autoNumber: "AMS"  },
+             extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+                }
+        });
+    </script>
+    <script type="text/javascript"
+     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../../index.html">DZUNG TRAN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="../../index.html">ABOUT</span></a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="../../articles/index.html">RESEARCH</a>
+        </li>
+
+        <!-- <li class="nav-item ">
+          <a class="nav-link" href="../../projects/index.html">PROJECTS</a>
+        </li> -->
+
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">WRITING</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="../../cv/index.html">CV & PUBLICATIONS</a>
+        </li>
+
+
+      </ul>
+      <!-- Search Box -->
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+
+    
+
+<br>
+<div class="container" style="text-align:center;">
+
+  <figure>
+  <img src="../../static/img/Mendeley/Logos.png" alt="Overleaf+Mendeley" style="width:75%">
+   <!-- <figcaption style="font-size: 0.5em">Photo by Ethan Weil on Unsplash </figcaption> -->
+  </figure>
+  <br>
+  <br>
+
+  <!-- <div class="container-medium"> -->
+  <div class="container-medium" style="text-align:center;">
+    <h1 style="text-align:center;"> Fix bib File When Importing References</h1>
+    <h1 style="text-align:center;"> from Mendeley into Overleaf</h1>
+  </div>
+  <!-- </div> -->
+  <div>
+    <h5 style="text-align:center;">Last updated: May 19, 2020</h5>
+  </div>
+
+  <div>
+   	<button class="btn" style="width:50%"><i class="fa fa-download"></i> <a href="../../static/python/Mendeley.py" download>Download Code Here</a> </button>
+	</div>
+  <br>
+  <br>
+
+  <div class="container-medium" style="text-align:center;">
+  <div class="articles-content" style="text-align:justify;">
+    <p ><span class="firstcharacter">A</span> couple of weeks ago, I signed up to become an IEEE member. One of the benefits of being a member is that you have <a href="https://ieeeauthorcenter.ieee.org/ieee-membership-advantages/" target="_blank"> Overleaf Pro account subscription</a>. Even better, Overleaf allows you to link to Mendeley account and generates the bib file out of your references automatically (You can see the tutorial <a href="https://www.overleaf.com/blog/348-new-manage-shared-references-with-mendeley-groups">here</a>. The bib file can be also generated directly in <a href="https://blog.mendeley.com/2011/10/25/howto-use-mendeley-to-create-citations-using-latex-and-bibtex/">Mendeley</a>, however, the bib file generated in Mendeley contains way more redundant fields comparing to the one generated through Overleaf.).  This is really convenient as you just need to create a (private) group in  Mendeley for the references of your preparing paper, then use Overleaf to export the bib file. However, the auto-generated bib file often contains unexpected fields such as: url, issn, isbn, keywords, etc., which could mess up the reference section of your paper. Therefore, I wrote a simple python program to help fix the problem. The download link is provided at the beginning of this article.
+    </p>
+
+  <p>
+  To run the program, you just need to type: <code class="w3-codespan">$python Mendeley.py &ltpath-to-bib-file&gt</code>
+  It doesn't matter if your bib file is generated by Overleaf or Mendeley, the program will help you:
+  <ul>
+  <li>  Remove redundant fields </li>
+  <li>  Fix the capitalization in the title (You need to install titlecase before using the program: <code class="w3-codespan">$pip install titlecase</code>) </li>
+  </ul>
+  Note that the program will create a copy of your original file under the name <code class="w3-codespan">&ltyour-bib-file&gt.bib.bak</code> before directly modifying your bib file.
+  Plus, you can easily add the to-delete-fields to the program by the syntax: <code class="w3-codespan">&ltto-delete-field&gt.*\n</code>
+  </p>
+  <figure class="center">
+  <center>
+  <img src="../../static/img/Mendeley/DelRegex.png" alt="Graph" style="width:40%">
+  <!-- <figcaption style="font-size: 0.5em; text-align: right; padding-right: 134px;">Photos on robots.net</figcaption> -->
+  <figcaption style="font-size: 0.8em">Figure 1 - Adding to-delete-field with Regular Expression in the program. </figcaption>
+  </center>
+  </figure>
+
+  Below is an example of a reference in the bib file before and after using the program:
+  <br>
+  <br>
+
+  <figure class="center">
+  <center>
+  <img src="../../static/img/Mendeley/BNA.png" alt="Graph" style="width:75%">
+  <figcaption style="font-size: 0.8em">Figure 2 - A reference before and after removing the redundant field with the program. </figcaption>
+  </center>
+  </figure>
+
+  <p>If you have any suggestions on the program, just drop a comment below.</p>
+
+
+  </div>
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+  <!-- Add comments -->
+  <div id="disqus_thread"></div>
+  <script>
+
+  var disqus_config = function () {
+  this.page.url = 'https://dzungtmd.github.io/';
+  this.page.identifier = 'https-dzungtmd-github-io';
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-dzungtmd-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+
+<!-- Footer Note  -->
+<footer>
+    <div class="container">
+        <hr></hr>
+        <div class="row">
+            <div class="span12">
+            <strong>Dzung Tran</strong><br>
+            <!--PhD Candidate <br>
+            Research Assistant at Laboratory for Autonomous, Control, Information, and Systems (<a href="http://lacis.eng.usf.edu/index.html" target="_blank">LACIS</a>)<br>
+            Department of Mechanical Engineering<br>
+            University of South Florida<br> -->
+            Email: <a href="mailto:dtran3@mail.usf.edu?Subject=Contact%20from%20DT%20Site" target="_blank">dtran3@mail.usf.edu</a> <br>
+            <br>
+            </div>
+
+          </div>
+        </div>
+    </div>
+</footer>
+
+<!--My script  -->
+<!-- <script src="../static/script/myscript.js"> </script> -->
+
+</html>
